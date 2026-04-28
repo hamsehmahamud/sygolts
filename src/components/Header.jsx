@@ -35,11 +35,11 @@ const Header = ({ theme, toggleTheme }) => {
       <div className="container mx-auto flex justify-between items-center w-full max-w-[1280px]">
         {/* Logo */}
         <div className="flex items-center gap-[16px] group cursor-pointer transition-transform hover:scale-105">
-          <div className="w-[64px] h-[64px] bg-white rounded-xl shadow-sm p-[2px] flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-700">
+          <div className="w-[64px] h-[64px] bg-white dark:bg-slate-100 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.2)] dark:shadow-[0_0_20px_rgba(255,255,255,0.15)] p-[4px] flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-600">
             <img 
               src={logo} 
               alt="SYGO Logo" 
-              className="w-full h-full object-contain" 
+              className="w-full h-full object-contain rounded-full mix-blend-multiply" 
             />
           </div>
           <div className="flex flex-col hidden sm:flex">

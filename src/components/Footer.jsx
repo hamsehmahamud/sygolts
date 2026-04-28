@@ -30,8 +30,8 @@ const Footer = () => {
           {/* Brand Col */}
           <div className="space-y-[24px]">
             <div className="flex items-center gap-[16px]">
-              <div className="w-[64px] h-[64px] bg-white rounded-xl p-[2px] flex items-center justify-center overflow-hidden shadow-md">
-                <img src={logo} alt="SYGO Logo" className="w-full h-full object-contain" />
+              <div className="w-[64px] h-[64px] bg-white dark:bg-slate-100 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.2)] p-[4px] flex items-center justify-center overflow-hidden border border-slate-100/50">
+                <img src={logo} alt="SYGO Logo" className="w-full h-full object-contain rounded-full mix-blend-multiply" />
               </div>
               <span className="text-[28px] font-bold tracking-tight">SYGO</span>
             </div>
