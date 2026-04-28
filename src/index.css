@@ -1,29 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Brand Colors */
+    --brand-blue: #4CC9F0;
+    --brand-pink: #F72585;
+    --brand-purple: #7209B7;
+    --brand-yellow: #FFD60A;
+    --brand-green: #4361EE;
+
+    /* Pastel Colors */
+    --pastel-blue: #E0FBFC;
+    --pastel-green: #F0FFF4;
+    --pastel-yellow: #FFF9DB;
+    --pastel-purple: #F3E8FF;
+
+    /* Text Colors */
+    --on-surface: #2D3142;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-full: 9999px;
+  }
+
   body {
-    @apply font-inter text-gray-800 bg-white transition-colors duration-300;
+    @apply font-sans text-gray-800 bg-white transition-colors duration-300;
   }
   .dark body {
-    @apply bg-black text-gray-100;
+    @apply bg-slate-900 text-slate-100;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins tracking-tight;
+    @apply tracking-tight;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-gradient text-white font-semibold py-2 px-6 rounded-full hover:shadow-lg transition-all transform hover:-translate-y-1;
+    @apply bg-sygo-purple text-white font-bold py-3 px-8 rounded-[32px] hover:shadow-lg transition-all transform hover:scale-105 active:scale-95 active:shadow-none active:translate-y-1;
+    box-shadow: 0 8px 0 rgba(114, 9, 183, 0.3);
+  }
+  .btn-primary:active {
+    box-shadow: 0 0px 0 rgba(114, 9, 183, 0.3);
+  }
+  .btn-secondary {
+    @apply bg-white dark:bg-slate-800 border-4 border-sygo-blue text-sygo-purple font-bold py-3 px-6 rounded-xl hover:bg-sygo-blue/10 hover:scale-105 transition-all;
+  }
+  .btn-link {
+    @apply text-sygo-green font-bold hover:underline transition-all duration-300;
   }
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-sygo-purple text-center mb-12;
+    @apply text-4xl md:text-5xl font-bold text-sygo-purple text-center mb-12;
   }
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+  .nav-link {
+    @apply relative text-sygo-purple font-normal transition-colors duration-300;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-[-4px] w-0 h-[2px] bg-sygo-yellow transition-all duration-300;
+  }
+  .nav-link:hover::after {
+    @apply w-full;
   }
 }

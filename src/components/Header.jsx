@@ -9,7 +9,7 @@ const Header = ({ theme, toggleTheme }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -28,88 +28,86 @@ const Header = ({ theme, toggleTheme }) => {
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 dark:bg-gray-900/90 shadow-md py-2' 
-          : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm py-4'
-      }`}
+          ? 'bg-white dark:bg-slate-900 shadow-md' 
+          : 'bg-white dark:bg-slate-900'
+      } h-[64px] lg:h-[80px] px-[16px] py-[12px] flex items-center`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center w-full max-w-[1280px]">
         {/* Logo */}
-        <div className="flex items-center gap-3 group cursor-pointer animate-fade-in-left">
-          <div className="relative w-12 h-12 bg-white dark:bg-transparent rounded-full p-0.5 shadow-inner overflow-hidden border-2 border-sygo-purple/20 dark:border-white/10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+        <div className="flex items-center gap-[12px] group cursor-pointer">
+          <div className="w-[60px] h-[60px] overflow-hidden">
             <img 
               src={logo} 
               alt="SYGO Logo" 
-              className="w-full h-full object-contain dark:filter dark:brightness-110" 
+              className="w-full h-full object-contain" 
             />
           </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-black text-sygo-purple dark:text-sygo-purple-light leading-tight group-hover:tracking-wider transition-all">SYGO</span>
-            <span className="text-[10px] font-bold text-sygo-pink uppercase tracking-tighter">
+          <div className="flex flex-col hidden sm:flex">
+            <span className="text-[20px] font-bold text-sygo-purple leading-tight">SYGO</span>
+            <span className="text-[12px] text-sygo-pink">
               Somali Youth Growth Mind Organization
             </span>
           </div>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-[32px]">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setActiveTab(link.name)}
-              className={`font-bold text-sm transition-all relative py-2 ${
-                activeTab === link.name 
-                  ? 'text-sygo-purple dark:text-sygo-purple-light' 
-                  : 'text-gray-700 dark:text-gray-300 hover:text-sygo-purple dark:hover:text-white'
-              }`}
+              className="nav-link text-[16px]"
             >
               {link.name}
               {activeTab === link.name && (
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-sygo-purple rounded-full"></div>
+                <div className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-sygo-yellow"></div>
               )}
             </a>
           ))}
         </nav>
 
         {/* Actions */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-[16px]">
           <button 
             onClick={toggleTheme}
-            className="w-9 h-9 bg-sygo-purple/5 dark:bg-white/10 rounded-full flex items-center justify-center text-sygo-purple dark:text-sygo-yellow hover:rotate-12 active:scale-90 transition-all duration-300 shadow-sm"
+            className="w-[40px] h-[40px] bg-pastel-blue dark:bg-slate-800 rounded-full flex items-center justify-center text-sygo-purple dark:text-sygo-yellow transition-all"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
           >
-            {theme === 'light' ? (
-              <Moon size={18} fill="currentColor" className="animate-in fade-in zoom-in duration-300" />
-            ) : (
-              <Sun size={18} fill="currentColor" className="animate-in fade-in zoom-in duration-300" />
-            )}
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
-          <button className="bg-[#E91E63] text-white font-bold py-2.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm">
+          <button className="bg-sygo-pink text-white font-bold text-[16px] px-[24px] py-[12px] rounded-[20px] hover:scale-105 transition-transform">
             Donate Now
           </button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="lg:hidden text-sygo-purple dark:text-sygo-purple-light"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="lg:hidden flex items-center gap-4">
+          <button 
+            onClick={toggleTheme}
+            className="w-[40px] h-[40px] bg-pastel-blue dark:bg-slate-800 rounded-full flex items-center justify-center text-sygo-purple dark:text-sygo-yellow"
+          >
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
+          <button 
+            className="text-sygo-purple dark:text-slate-200"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-gray-800 absolute top-full left-0 w-full shadow-2xl py-8 px-6 animate-fade-in-down border-t dark:border-gray-700">
-          <nav className="flex flex-col gap-6">
+        <div className="lg:hidden absolute top-[64px] left-0 w-full bg-white dark:bg-slate-900 shadow-xl py-6 px-6 border-t dark:border-slate-800 flex flex-col gap-6">
+          <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-lg font-bold ${
-                  activeTab === link.name 
-                    ? 'text-sygo-purple dark:text-sygo-purple-light' 
-                    : 'text-gray-700 dark:text-gray-300'
+                className={`text-[18px] font-bold ${
+                  activeTab === link.name ? 'text-sygo-purple' : 'text-on-surface dark:text-slate-200'
                 }`}
                 onClick={() => {
                   setActiveTab(link.name);
@@ -119,18 +117,10 @@ const Header = ({ theme, toggleTheme }) => {
                 {link.name}
               </a>
             ))}
-            <div className="flex items-center justify-between pt-4 border-t dark:border-gray-700">
-              <button 
-                onClick={toggleTheme}
-                className="w-10 h-10 bg-sygo-purple/5 dark:bg-white/10 rounded-full flex items-center justify-center text-sygo-purple dark:text-sygo-yellow active:scale-90 transition-all"
-              >
-                {theme === 'light' ? <Moon size={20} fill="currentColor" /> : <Sun size={20} fill="currentColor" />}
-              </button>
-              <button className="bg-[#E91E63] text-white font-bold py-3 px-8 rounded-full shadow-lg text-sm">
-                Donate Now
-              </button>
-            </div>
           </nav>
+          <button className="bg-sygo-pink text-white font-bold text-[16px] px-[24px] py-[12px] rounded-[20px] w-full">
+            Donate Now
+          </button>
         </div>
       )}
     </header>
