@@ -41,7 +41,7 @@ const CollaborativeApproach = () => {
                 <div 
                   key={idx} 
                   className="bg-white dark:bg-slate-800 p-[24px] rounded-[16px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-700 flex items-start gap-[20px] group animate-slide-in-up"
-                  style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards', opacity: 0 }}
+                  style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards' }}
                 >
                   <div className={`w-[56px] h-[56px] ${item.color} rounded-[12px] flex items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-md`}>
                     <item.icon className="text-white" size={28} />

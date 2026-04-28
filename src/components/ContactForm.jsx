@@ -13,7 +13,7 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div className="bg-white dark:bg-slate-800 rounded-[16px] p-[32px] md:p-[48px] shadow-lg animate-slide-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards', opacity: 0 }}>
+        <div className="bg-white dark:bg-slate-800 rounded-[16px] p-[32px] md:p-[48px] shadow-lg animate-slide-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <form className="space-y-[24px]">
             <div>
               <label htmlFor="fullName" className="block text-[14px] font-bold text-on-surface dark:text-slate-300 mb-[8px]">

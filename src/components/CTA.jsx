@@ -9,7 +9,7 @@ const CTA = () => {
           Positive <span className="text-sygo-yellow">Social Change!</span>
         </h2>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-[24px] animate-slide-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards', opacity: 0 }}>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-[24px] animate-slide-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <Link 
             to="/contact" 
             className="w-full sm:w-auto bg-sygo-pink hover:bg-[#d61b6d] text-white font-bold py-[16px] px-[40px] rounded-[16px] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"

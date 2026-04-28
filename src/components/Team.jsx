@@ -38,7 +38,7 @@ const Team = () => {
           {teamMembers.map((member, idx) => (
             <div 
               key={idx}
-              className="bg-slate-50 dark:bg-slate-800 rounded-[12px] p-[32px] text-center shadow-sm border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-slide-in-up opacity-0"
+              className="bg-slate-50 dark:bg-slate-800 rounded-[12px] p-[32px] text-center shadow-sm border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl animate-slide-in-up"
               style={{ animationDelay: `${(idx + 1) * 0.1}s`, animationFillMode: 'forwards' }}
             >
               <h3 className="text-[20px] font-bold text-on-surface dark:text-slate-200 mb-[8px] leading-tight">
