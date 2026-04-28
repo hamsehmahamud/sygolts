@@ -72,7 +72,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {programs.map((program, index) => (
+          {programs.map((program) => (
             <div 
               key={program.id}
               className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 flex flex-col group hover:shadow-2xl transition-all duration-300"

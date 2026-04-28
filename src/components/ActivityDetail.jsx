@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { activities } from '../data/activities';
-import { ArrowLeft, CheckCircle2, Users, Calendar, Target } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Users, Target } from 'lucide-react';
 import { useEffect } from 'react';
 
 const ActivityDetail = () => {

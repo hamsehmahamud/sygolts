@@ -1,4 +1,4 @@
-import { Heart, BookOpen, Zap, Leaf } from 'lucide-react';
+import { Heart, BookOpen, Zap, HeartPulse, Users2 } from 'lucide-react';
 
 const FocusAreas = () => {
   const areas = [
@@ -8,6 +8,7 @@ const FocusAreas = () => {
       icon: <Heart size={32} />,
       color: 'bg-blue-50 text-blue-500 border-blue-100',
       hoverColor: 'hover:bg-blue-500',
+    },
     { 
       title: 'Education', 
       icon: <BookOpen size={32} />, 
@@ -55,7 +56,6 @@ const FocusAreas = () => {
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {area.description}
               </p>
-              </div>
             </div>
           ))}
         </div>
