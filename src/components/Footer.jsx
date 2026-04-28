@@ -5,7 +5,10 @@ import {
   Instagram, 
   Linkedin, 
   ArrowUp, 
-  Send 
+  Send,
+  MapPin,
+  Phone,
+  Mail 
 } from 'lucide-react';
 
 const Footer = () => {
@@ -60,14 +63,30 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Get Involved */}
+          {/* Contact Us */}
           <div>
-            <h4 className="text-[18px] font-bold mb-[24px]">Get Involved</h4>
-            <ul className="space-y-[12px]">
-              <li><a href="#" className="text-[14px] text-white/80 hover:text-white hover:underline transition-colors">Become a Volunteer</a></li>
-              <li><a href="#" className="text-[14px] text-white/80 hover:text-white hover:underline transition-colors">Partner With Us</a></li>
-              <li><a href="#" className="text-[14px] text-white/80 hover:text-white hover:underline transition-colors">Make a Donation</a></li>
-              <li><a href="#" className="text-[14px] text-white/80 hover:text-white hover:underline transition-colors">Sponsor a Project</a></li>
+            <h4 className="text-[18px] font-bold mb-[24px]">Contact Us</h4>
+            <ul className="space-y-[16px]">
+              <li className="flex items-start gap-[12px]">
+                <MapPin size={20} className="text-sygo-yellow shrink-0 mt-[4px]" />
+                <span className="text-[14px] text-white/80 leading-[1.6]">
+                  06 Kebele, inside Jigjiga Youth Center (in front of Public Admin & Management College), Jigjiga City, Ethiopia
+                </span>
+              </li>
+              <li className="flex items-start gap-[12px]">
+                <Phone size={20} className="text-sygo-yellow shrink-0 mt-[4px]" />
+                <span className="text-[14px] text-white/80 leading-[1.6]">
+                  +251 948 677 457<br />
+                  +251 915 428 533
+                </span>
+              </li>
+              <li className="flex items-start gap-[12px]">
+                <Mail size={20} className="text-sygo-yellow shrink-0 mt-[4px]" />
+                <span className="text-[14px] text-white/80 leading-[1.6]">
+                  sygoacorg@gmail.com<br />
+                  samiiraomer7457@gmail.com
+                </span>
+              </li>
             </ul>
           </div>
 

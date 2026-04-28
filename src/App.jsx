@@ -5,6 +5,9 @@ import Hero from './components/Hero';
 import VisionMission from './components/VisionMission';
 import CollaborativeApproach from './components/CollaborativeApproach';
 import ImpactUpdatesHub from './components/ImpactUpdatesHub';
+import Team from './components/Team';
+import CTA from './components/CTA';
+import ContactForm from './components/ContactForm';
 import Portfolio from './components/Portfolio';
 import Partners from './components/Partners';
 import Footer from './components/Footer';
@@ -17,7 +20,10 @@ const Home = () => (
     <CollaborativeApproach />
     <ImpactUpdatesHub />
     <Portfolio />
+    <Team />
     <Partners />
+    <CTA />
+    <ContactForm />
   </main>
 );
 
