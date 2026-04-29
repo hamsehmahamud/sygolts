@@ -1,4 +1,5 @@
 import React from 'react';
+import Portfolio from '../components/Portfolio';
 
 const Programs = () => {
   return (
@@ -19,20 +20,10 @@ const Programs = () => {
         </div>
       </section>
 
-      {/* Page Content Placeholder */}
-      <section className="py-[80px] lg:py-[120px]">
-        <div className="container mx-auto px-6 lg:px-[96px] max-w-[1280px]">
-          <div className="bg-white dark:bg-slate-900/50 rounded-3xl p-[40px] md:p-[60px] shadow-xl border border-slate-100 dark:border-slate-800">
-            <h2 className="text-[28px] md:text-[36px] font-bold text-sygo-purple dark:text-white mb-[24px]">
-              Content Coming Soon
-            </h2>
-            <p className="text-[16px] md:text-[18px] text-slate-600 dark:text-slate-400 mb-[32px] leading-relaxed">
-              We are actively building this section to provide you with the most up-to-date and comprehensive information. Check back soon for exciting updates!
-            </p>
-            <div className="w-full h-[300px] rounded-2xl bg-slate-100 dark:bg-slate-800/50 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
+      {/* Embedded Portfolio Section */}
+      <div className="pb-[80px]">
+        <Portfolio />
+      </div>
     </div>
   );
 };

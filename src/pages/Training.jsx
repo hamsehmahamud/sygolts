@@ -19,18 +19,48 @@ const Training = () => {
         </div>
       </section>
 
-      {/* Page Content Placeholder */}
+      {/* Modern Training Works Section */}
       <section className="py-[80px] lg:py-[120px]">
         <div className="container mx-auto px-6 lg:px-[96px] max-w-[1280px]">
-          <div className="bg-white dark:bg-slate-900/50 rounded-3xl p-[40px] md:p-[60px] shadow-xl border border-slate-100 dark:border-slate-800">
-            <h2 className="text-[28px] md:text-[36px] font-bold text-sygo-purple dark:text-white mb-[24px]">
-              Content Coming Soon
-            </h2>
-            <p className="text-[16px] md:text-[18px] text-slate-600 dark:text-slate-400 mb-[32px] leading-relaxed">
-              We are actively building this section to provide you with the most up-to-date and comprehensive information. Check back soon for exciting updates!
-            </p>
-            <div className="w-full h-[300px] rounded-2xl bg-slate-100 dark:bg-slate-800/50 animate-pulse"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]">
+            {/* Training Card 1 */}
+            <div className="group relative h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 cursor-pointer">
+              <div className="absolute inset-0 bg-sygo-blue/20 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vocational Training" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 w-full p-[32px] z-20 translate-y-[20px] group-hover:translate-y-0 transition-transform duration-500">
+                <span className="bg-sygo-pink text-white px-[12px] py-[4px] rounded-full text-[12px] font-bold uppercase tracking-wider mb-[12px] inline-block shadow-md">Skill Building</span>
+                <h3 className="text-[24px] font-bold text-white mb-[8px] leading-tight">Vocational Training</h3>
+                <p className="text-white/80 text-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Equipping youth with practical, market-ready skills to thrive in the modern economy.</p>
+              </div>
+            </div>
+
+            {/* Training Card 2 */}
+            <div className="group relative h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 cursor-pointer">
+              <div className="absolute inset-0 bg-sygo-purple/20 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Leadership Workshops" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 w-full p-[32px] z-20 translate-y-[20px] group-hover:translate-y-0 transition-transform duration-500">
+                <span className="bg-sygo-purple text-white px-[12px] py-[4px] rounded-full text-[12px] font-bold uppercase tracking-wider mb-[12px] inline-block shadow-md">Leadership</span>
+                <h3 className="text-[24px] font-bold text-white mb-[8px] leading-tight">Youth Leadership</h3>
+                <p className="text-white/80 text-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Empowering the next generation of leaders through intensive workshops and mentorship.</p>
+              </div>
+            </div>
+
+            {/* Training Card 3 */}
+            <div className="group relative h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 cursor-pointer lg:col-span-1 md:col-span-2">
+              <div className="absolute inset-0 bg-sygo-green/20 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Skills" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 w-full p-[32px] z-20 translate-y-[20px] group-hover:translate-y-0 transition-transform duration-500">
+                <span className="bg-sygo-blue text-white px-[12px] py-[4px] rounded-full text-[12px] font-bold uppercase tracking-wider mb-[12px] inline-block shadow-md">Technology</span>
+                <h3 className="text-[24px] font-bold text-white mb-[8px] leading-tight">Digital Literacy</h3>
+                <p className="text-white/80 text-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Bridging the digital divide with comprehensive computer and internet training.</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </section>
     </div>
