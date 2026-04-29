@@ -22,7 +22,7 @@ const WhoWeAre = () => {
             </h2>
 
             <p className="text-[16px] md:text-[18px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              Founded on the belief that youth and women are the backbone of society, the <strong>Somali Youth Growth Mind Organization (SYGO)</strong> has a rich history of grassroots activism. We began as a small initiative and have grown into a leading force for sustainable development in the Somali Regional State.
+              The <strong>Somali Youth Growth Mind Organization (SYGO)</strong> is dedicated to creating sustainable change. Our mission is to empower youth—especially young women and girls—through skills development, leadership protection, and economic opportunities.
             </p>
 
             <div className="space-y-[24px] pt-[16px]">
@@ -32,9 +32,9 @@ const WhoWeAre = () => {
                   <History size={24} />
                 </div>
                 <div>
-                  <h3 className="text-[20px] font-bold text-sygo-purple dark:text-white mb-[8px]">Our History</h3>
+                  <h3 className="text-[20px] font-bold text-sygo-purple dark:text-white mb-[8px]">Youth Empowerment</h3>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Over the years, we have evolved from local community dialogues to spearheading regional campaigns, focusing heavily on education, health, and gender equality.
+                    We focus on unlocking the potential of young people by providing them with the necessary tools, education, and economic opportunities to lead and succeed in their communities.
                   </p>
                 </div>
               </div>
@@ -45,9 +45,9 @@ const WhoWeAre = () => {
                   <Briefcase size={24} />
                 </div>
                 <div>
-                  <h3 className="text-[20px] font-bold text-sygo-purple dark:text-white mb-[8px]">How We Work</h3>
+                  <h3 className="text-[20px] font-bold text-sygo-purple dark:text-white mb-[8px]">Women & Girls Empowerment</h3>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    We employ a collaborative, community-first approach. By partnering directly with local governments, international NGOs, and the youth themselves, we design programs that offer real, measurable impact.
+                    We are deeply committed to gender equality. By prioritizing skills development and leadership protection, we ensure that women and girls have a strong voice and a secure future.
                   </p>
                 </div>
               </div>
