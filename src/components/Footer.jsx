@@ -10,6 +10,7 @@ import {
   Phone,
   Mail 
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -55,11 +56,11 @@ const Footer = () => {
           <div>
             <h4 className="text-[20px] font-bold mb-[32px] text-sygo-yellow">Quick Links</h4>
             <ul className="space-y-[16px]">
-              <li><a href="#" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">About Us</a></li>
-              <li><a href="#" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Our Programs</a></li>
-              <li><a href="#" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Impact Reports</a></li>
-              <li><a href="#" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Latest Blog</a></li>
-              <li><a href="#" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Contact Us</a></li>
+              <li><Link to="/about" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">About Us</Link></li>
+              <li><Link to="/programs" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Our Programs</Link></li>
+              <li><Link to="/reports" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Impact Reports</Link></li>
+              <li><Link to="/gallery" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Impact Gallery</Link></li>
+              <li><a href="#contact" className="text-[16px] text-white/80 hover:text-white hover:translate-x-2 inline-block transition-transform duration-300">Contact Us</a></li>
             </ul>
           </div>
 

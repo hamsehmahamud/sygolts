@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import logo from '../assets/sygo_main_logo.jpg';
 
 const Header = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('Home');
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +17,12 @@ const Header = ({ theme, toggleTheme }) => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Programs', href: '#' },
-    { name: 'Training', href: '#' },
-    { name: 'Gallery', href: '#' },
-    { name: 'Reports', href: '#' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Programs', path: '/programs' },
+    { name: 'Training', path: '/training' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Reports', path: '/reports' },
   ];
 
   return (
@@ -34,7 +35,7 @@ const Header = ({ theme, toggleTheme }) => {
     >
       <div className="container mx-auto flex justify-between items-center w-full max-w-[1280px]">
         {/* Logo */}
-        <div className="flex items-center gap-[16px] group cursor-pointer transition-transform hover:scale-105">
+        <Link to="/" className="flex items-center gap-[16px] group cursor-pointer transition-transform hover:scale-105">
           <div className="w-[64px] h-[64px] bg-white dark:bg-slate-100 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.2)] dark:shadow-[0_0_20px_rgba(255,255,255,0.15)] p-[4px] flex items-center justify-center overflow-hidden border border-slate-100 dark:border-slate-600">
             <img 
               src={logo} 
@@ -48,27 +49,29 @@ const Header = ({ theme, toggleTheme }) => {
               Somali Youth Growth Mind Organization
             </span>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-[8px]">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setActiveTab(link.name)}
-              className={`relative px-[20px] py-[10px] text-[18px] font-bold rounded-full transition-all duration-300 ${
-                activeTab === link.name 
-                  ? 'text-sygo-purple dark:text-white bg-sygo-blue/10 dark:bg-sygo-blue/20' 
-                  : 'text-slate-600 dark:text-slate-300 hover:text-sygo-purple dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
-              }`}
-            >
-              {link.name}
-              {activeTab === link.name && (
-                <span className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-[6px] h-[6px] rounded-full bg-sygo-pink"></span>
-              )}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`relative px-[20px] py-[10px] text-[18px] font-bold rounded-full transition-all duration-300 ${
+                  isActive 
+                    ? 'text-sygo-purple dark:text-white bg-sygo-blue/10 dark:bg-sygo-blue/20' 
+                    : 'text-slate-600 dark:text-slate-300 hover:text-sygo-purple dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
+                }`}
+              >
+                {link.name}
+                {isActive && (
+                  <span className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-[6px] h-[6px] rounded-full bg-sygo-pink"></span>
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Actions */}
@@ -111,23 +114,23 @@ const Header = ({ theme, toggleTheme }) => {
       {isMenuOpen && (
         <div className="lg:hidden absolute top-[80px] sm:top-[100px] left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl py-[32px] px-[24px] border-t dark:border-slate-800 flex flex-col gap-[24px] animate-slide-in-up">
           <nav className="flex flex-col gap-[12px]">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`text-[20px] font-bold px-[20px] py-[14px] rounded-2xl transition-all ${
-                  activeTab === link.name 
-                    ? 'text-white bg-sygo-purple shadow-md' 
-                    : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
-                }`}
-                onClick={() => {
-                  setActiveTab(link.name);
-                  setIsMenuOpen(false);
-                }}
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`text-[20px] font-bold px-[20px] py-[14px] rounded-2xl transition-all ${
+                    isActive 
+                      ? 'text-white bg-sygo-purple shadow-md' 
+                      : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
           <button className="bg-sygo-pink hover:bg-[#d61b6d] text-white font-bold text-[20px] px-[32px] py-[16px] rounded-[24px] w-full shadow-lg shadow-sygo-pink/30 hover:shadow-sygo-pink/50 transition-all">
             Donate Now

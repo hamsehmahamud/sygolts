@@ -12,10 +12,19 @@ import Portfolio from './components/Portfolio';
 import Partners from './components/Partners';
 import Footer from './components/Footer';
 import ActivityDetail from './components/ActivityDetail';
+import WhoWeAre from './components/WhoWeAre';
+
+// Pages
+import About from './pages/About';
+import Programs from './pages/Programs';
+import Training from './pages/Training';
+import Gallery from './pages/Gallery';
+import Reports from './pages/Reports';
 
 const Home = () => (
   <main>
     <Hero />
+    <WhoWeAre />
     <VisionMission />
     <CollaborativeApproach />
     <ImpactUpdatesHub />
@@ -50,6 +59,11 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/training" element={<Training />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/reports" element={<Reports />} />
           <Route path="/activity/:id" element={<ActivityDetail />} />
         </Routes>
 
