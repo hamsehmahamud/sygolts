@@ -1,64 +1,9 @@
 import { Link } from 'react-router-dom';
-import stakeholder from '../assets/portfolio/stakeholder.jpg';
-import service from '../assets/portfolio/service.jpg';
-import training from '../assets/portfolio/training.jpg';
-import workshop from '../assets/portfolio/workshop.jpg';
-import governance from '../assets/portfolio/governance.jpg';
-import advocacy from '../assets/portfolio/advocacy.jpg';
-import peerEducation from '../assets/portfolio/peer_education.jpg';
+import { activities } from '../data/activities';
 
 const Portfolio = () => {
-  const programs = [
-    { 
-      id: 'gbv-response',
-      title: 'Awareness Raising on Youth-led GBV Response', 
-      image: training, 
-      category: 'SYGO Activities',
-      description: 'Awareness Raising on Youth-led GBV response and social norms change to empower young people to challenge harmful practices.'
-    },
-    { 
-      id: 'psychosocial-training',
-      title: 'Psychosocial Training', 
-      image: workshop, 
-      category: 'SYGO Activities',
-      description: 'Comprehensive training for staff to promote gender equity and active youth participation in decision-making.'
-    },
-    { 
-      id: 'peer-education',
-      title: 'Youths Peer-to-Peer Education', 
-      image: peerEducation, 
-      category: 'SYGO Activities',
-      description: 'Empowering young people to educate their peers on critical health and social issues.'
-    },
-    { 
-      id: 'capacity-building',
-      title: 'Capacity Building', 
-      image: governance, 
-      category: 'SYGO Activities',
-      description: 'Equipping youth leaders with the skills to manage organizations effectively and transparently.'
-    },
-    { 
-      id: 'youth-advocacy',
-      title: 'Youth Advocacy & Radio Discourse', 
-      image: advocacy, 
-      category: 'SYGO Activities',
-      description: 'Using radio and social behavior change communication to amplify youth voices and drive social change.'
-    },
-    { 
-      id: 'gbv-awareness',
-      title: 'Youth GBV Awareness Campaign', 
-      image: stakeholder, 
-      category: 'SYGO Activities',
-      description: 'Strengthening relationships with key community leaders and organizations to drive sustainable growth.'
-    },
-    { 
-      id: 'mhpss',
-      title: 'Mental Health & Psychosocial Support (MHPSS)', 
-      image: service, 
-      category: 'SYGO Activities',
-      description: 'Providing compassionate, inclusive support services for survivors, focusing on holistic recovery and empowerment.'
-    },
-  ];
+  // Use the centralized activities data directly so the IDs match for the "Learn More" routing
+  const programs = activities;
 
   return (
     <section id="portfolio" className="relative py-[80px] lg:py-[120px] bg-slate-50 dark:bg-slate-900/30 transition-colors duration-300 border-b border-slate-200 dark:border-slate-800/50 overflow-hidden">
