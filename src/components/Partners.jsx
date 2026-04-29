@@ -2,32 +2,32 @@ const Partners = () => {
   const partners = [
     { 
       name: 'Swiss Agency for Development and Cooperation SDC', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Swiss_Agency_for_Development_and_Cooperation_logo.svg',
-      fallback: '/partners/sdc.jpg',
+      logo: '/partners/sdc.jpg',
+      fallback: '/partners/sdc.png',
       alt: 'SDC Logo'
     },
     { 
       name: 'SRS Women & Children Affairs Bureau', 
-      logo: 'https://ui-avatars.com/api/?name=SRS+Women&background=7209B7&color=fff&size=200&bold=true',
-      fallback: '/partners/srs-women-children.jpg',
+      logo: '/partners/srs-women-children.jpg',
+      fallback: '/partners/srs-women-children.png',
       alt: 'SRS Women & Children Affairs Bureau Logo'
     },
     { 
       name: 'Somali Regional State Youth and Sport Bureau', 
-      logo: 'https://ui-avatars.com/api/?name=SRS+Youth&background=4CC9F0&color=fff&size=200&bold=true',
-      fallback: '/partners/srs-youth-sport.jpg',
+      logo: '/partners/srs-youth-sport.jpg',
+      fallback: '/partners/srs-youth-sport.png',
       alt: 'SRS Youth and Sport Bureau Logo'
     },
     { 
       name: 'WDRO - Women Development & Reliance Organization', 
-      logo: 'https://ui-avatars.com/api/?name=WDRO&background=F72585&color=fff&size=200&bold=true',
-      fallback: '/partners/wdro.jpg',
+      logo: '/partners/wdro.jpg',
+      fallback: '/partners/wdro.png',
       alt: 'WDRO Logo'
     },
     { 
       name: 'Plan International', 
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Plan_International_Logo.svg',
-      fallback: '/partners/plan-international.jpg',
+      logo: '/partners/plan-international.jpg',
+      fallback: '/partners/plan-international.png',
       alt: 'Plan International Logo'
     }
   ];
@@ -65,7 +65,7 @@ const Partners = () => {
                   
                   {/* Inner Floating Circle */}
                   <div 
-                    className="w-[100px] h-[100px] md:w-[130px] md:h-[130px] rounded-full bg-white dark:bg-slate-800 shadow-md relative flex items-center justify-center p-[20px] grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:shadow-sygo-pink/30 group-hover:shadow-xl overflow-hidden animate-float"
+                    className="w-[110px] h-[110px] md:w-[140px] md:h-[140px] rounded-full bg-white shadow-md relative flex items-center justify-center p-[15px] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:shadow-sygo-pink/30 group-hover:shadow-xl overflow-hidden animate-float"
                     style={{ animationDelay: `${idx * 0.7}s` }}
                   >
                     <img 
@@ -84,7 +84,7 @@ const Partners = () => {
                 </div>
                 
                 {/* Partner Name Below Logo */}
-                <h4 className="text-[14px] font-bold text-center text-sygo-purple dark:text-slate-300 max-w-[180px] opacity-70 group-hover:opacity-100 group-hover:text-sygo-pink transition-all duration-300 line-clamp-2">
+                <h4 className="text-[14px] font-bold text-center text-sygo-purple dark:text-slate-300 max-w-[180px] group-hover:text-sygo-pink transition-all duration-300 line-clamp-2 mt-[5px]">
                   {partner.name}
                 </h4>
               </div>
@@ -102,7 +102,7 @@ const Partners = () => {
                   <div className="absolute inset-0 rounded-full border-[2px] border-dashed border-sygo-pink/30 group-hover:border-sygo-pink transition-colors duration-500 animate-rotate-slow"></div>
                   
                   <div 
-                    className="w-[100px] h-[100px] md:w-[130px] md:h-[130px] rounded-full bg-white dark:bg-slate-800 shadow-md relative flex items-center justify-center p-[20px] grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:shadow-sygo-pink/30 group-hover:shadow-xl overflow-hidden animate-float"
+                    className="w-[110px] h-[110px] md:w-[140px] md:h-[140px] rounded-full bg-white shadow-md relative flex items-center justify-center p-[15px] transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:shadow-sygo-pink/30 group-hover:shadow-xl overflow-hidden animate-float"
                     style={{ animationDelay: `${idx * 0.7}s` }}
                   >
                     <img 
@@ -120,7 +120,7 @@ const Partners = () => {
                   </div>
                 </div>
                 
-                <h4 className="text-[14px] font-bold text-center text-sygo-purple dark:text-slate-300 max-w-[180px] opacity-70 group-hover:opacity-100 group-hover:text-sygo-pink transition-all duration-300 line-clamp-2">
+                <h4 className="text-[14px] font-bold text-center text-sygo-purple dark:text-slate-300 max-w-[180px] group-hover:text-sygo-pink transition-all duration-300 line-clamp-2 mt-[5px]">
                   {partner.name}
                 </h4>
               </div>
