@@ -35,7 +35,7 @@ const ImpactUpdatesHub = () => {
         <h2 className="text-[48px] font-bold text-sygo-purple text-center mb-[64px]">
           Impact & Updates Hub
         </h2>
-        
+
         <div className="grid md:grid-cols-3 gap-[32px]">
           {updates.map((update, idx) => (
             <div key={idx} className={`bg-white dark:bg-slate-900 rounded-[16px] p-[32px] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-l-[8px] ${update.borderColor}`}>
