@@ -15,7 +15,7 @@ const Programs = () => {
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sygo-blue to-sygo-pink">Programs</span>
           </h1>
           <p className="text-[18px] md:text-[20px] text-slate-600 dark:text-slate-300 max-w-[800px] mx-auto leading-relaxed">
-            Explore our initiatives across health, education, environment, and social empowerment.
+            Explore our initiatives across health, education, and social empowerment throughout Jigjiga and the Somali Regional State of Ethiopia.
           </p>
         </div>
       </section>

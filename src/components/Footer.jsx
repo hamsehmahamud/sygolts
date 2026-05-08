@@ -37,7 +37,7 @@ const Footer = () => {
               <span className="text-[28px] font-bold tracking-tight">SYGO</span>
             </div>
             <p className="text-[16px] text-white/80 leading-relaxed pr-[20px]">
-              Empowering Somali youth through education, health, and leadership programs to drive sustainable change.
+              Empowering youth across the Somali Regional State of Ethiopia through education, health, and leadership programs to drive sustainable change.
             </p>
             <div className="flex gap-[16px]">
               {socialIcons.map((social, i) => (

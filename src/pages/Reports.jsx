@@ -22,7 +22,7 @@ const Reports = () => {
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-sygo-pink to-sygo-blue">Reports & Bids</span>
           </h1>
           <p className="text-[18px] md:text-[20px] text-slate-600 dark:text-slate-300 max-w-[800px] mx-auto leading-relaxed">
-            Transparency and accountability are at the core of what we do. Explore our latest reports, completed projects, and awarded bids.
+            Transparency and accountability are at the core of what we do in Jigjiga and across the SRS. Explore our latest reports, completed projects, and awarded bids.
           </p>
         </div>
       </section>

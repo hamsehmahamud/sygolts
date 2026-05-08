@@ -13,8 +13,8 @@ export const activities = [
     image: stakeholder, 
     category: 'Networking',
     description: 'Strengthening relationships with key community leaders and organizations to drive sustainable growth.',
-    fullDescription: 'Our networking stakeholder engagement programs are designed to bridge the gap between youth organizations and community leaders. We believe that sustainable development is only possible through collaboration. This initiative focuses on building long-term partnerships with local government agencies, international NGOs, and private sector leaders to create a supportive ecosystem for Somali youth.',
-    impact: 'Established over 50 key partnerships across Mogadishu and surrounding regions.',
+    fullDescription: 'Our networking stakeholder engagement programs are designed to bridge the gap between youth organizations and community leaders in the Somali Region. We believe that sustainable development is only possible through collaboration. This initiative focuses on building long-term partnerships with regional government agencies, international NGOs, and private sector leaders in Ethiopia to create a supportive ecosystem for youth.',
+    impact: 'Established over 50 key partnerships across Jigjiga and the Somali Regional State.',
     gallery: [stakeholder, training, workshop]
   },
   { 
@@ -24,7 +24,7 @@ export const activities = [
     category: 'SYGO Activities',
     description: 'Awareness Raising on Youth-led GBV response and social norms change to empower young people to challenge harmful practices.',
     fullDescription: 'Gender-Based Violence (GBV) remains a critical challenge. SYGO leads youth-driven awareness campaigns that target deep-rooted social norms. By empowering young people to become advocates for change, we are challenging harmful practices and promoting a culture of respect, equality, and protection for all.',
-    impact: 'Reached over 10,000 youth through community dialogues and radio broadcasts.',
+    impact: 'Reached over 3,000 youth through community dialogues and radio broadcasts.',
     gallery: [training, advocacy, peerEducation]
   },
   { 
@@ -33,8 +33,8 @@ export const activities = [
     image: workshop, 
     category: 'Advocacy',
     description: 'Comprehensive training for staff to promote gender equity and active youth participation in decision-making.',
-    fullDescription: 'Internal capacity building is at the heart of our mission. We provide intensive training for our staff and volunteers on gender equality frameworks and youth engagement strategies. This ensures that every SYGO program is implemented with a gender-sensitive lens and promotes meaningful youth participation at all levels.',
-    impact: 'Trained 100+ staff members and volunteers in Mogadishu.',
+    fullDescription: 'Internal capacity building is at the heart of our mission. We provide intensive training for our staff and volunteers in Jigjiga on gender equality frameworks and youth engagement strategies. This ensures that every SYGO program in the SRS is implemented with a gender-sensitive lens and promotes meaningful youth participation at all levels.',
+    impact: 'Trained 100+ staff members and volunteers across Jigjiga.',
     gallery: [workshop, service, governance]
   },
   { 
@@ -53,8 +53,8 @@ export const activities = [
     image: governance, 
     category: 'Governance',
     description: 'Equipping youth leaders with the skills to manage organizations effectively and transparently.',
-    fullDescription: 'Transparency and accountability are the foundations of strong organizations. SYGO provides governance training to emerging youth-led groups in Somalia. We cover financial management, project planning, and ethical leadership to ensure these groups can manage their operations effectively and attract sustainable funding.',
-    impact: 'Mentored 20+ youth-led NGOs on organizational standards.',
+    fullDescription: 'Transparency and accountability are the foundations of strong organizations. SYGO provides governance training to emerging youth-led groups in the Somali Region of Ethiopia. We cover financial management, project planning, and ethical leadership to ensure these groups can manage their operations effectively and attract sustainable funding.',
+    impact: 'Mentored 20+ youth-led NGOs on organizational standards in the SRS.',
     gallery: [governance, stakeholder, workshop]
   },
   { 
@@ -63,8 +63,8 @@ export const activities = [
     image: advocacy, 
     category: 'Media',
     description: 'Using radio and social behavior change communication to amplify youth voices and drive social change.',
-    fullDescription: 'Media is a powerful tool for social behavior change. Our radio discourse programs provide a platform for young people to discuss critical issues such as education, peacebuilding, and human rights. Through these broadcasts, we reach millions of listeners across Somalia, promoting positive social transformation.',
-    impact: 'Produced 50+ radio episodes with a reach of 2 million listeners.',
+    fullDescription: 'Media is a powerful tool for social behavior change. Our radio discourse programs in Ethiopia provide a platform for young people to discuss critical issues such as education, peacebuilding, and human rights. Through these broadcasts, we reach millions of listeners across the Somali Regional State, promoting positive social transformation.',
+    impact: 'Produced 50+ radio episodes with a reach of 2 million listeners in Ethiopia.',
     gallery: [advocacy, training, peerEducation]
   },
   { 
@@ -74,7 +74,7 @@ export const activities = [
     category: 'Education',
     description: 'Empowering young people to educate their peers on critical health and social issues.',
     fullDescription: 'Peer-to-peer education is one of our most effective strategies. We train young "Change Agents" who then educate their peers within their own communities. This approach builds trust and ensures that information is communicated in a way that is relevant and culturally sensitive.',
-    impact: 'Trained 200 peer educators reaching 5,000 students.',
+    impact: 'Trained 200 peer educators reaching 5,000 students in Jigjiga schools.',
     gallery: [peerEducation, advocacy, training]
   },
 ];

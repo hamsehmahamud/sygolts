@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
           
           <p className="text-[18px] text-on-surface dark:text-slate-300 max-w-[500px] leading-[1.6]">
-            To empower youth—especially young women and girls—through skills development, leadership protection, and economic opportunities.
+            Based in Jigjiga, we empower youth—especially young women and girls—across the Somali Regional State of Ethiopia through skills development, leadership protection, and economic opportunities.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-[16px] pt-[16px]">

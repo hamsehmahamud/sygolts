@@ -22,7 +22,7 @@ const WhoWeAre = () => {
             </h2>
 
             <p className="text-[16px] md:text-[18px] text-slate-600 dark:text-slate-300 leading-relaxed">
-              The <strong>Somali Youth Growth Mind Organization (SYGO)</strong> is dedicated to creating sustainable change. Our mission is to empower youth—especially young women and girls—through skills development, leadership protection, and economic opportunities.
+              Based in <strong>Jigjiga</strong> and operating across the <strong>Somali Regional State (SRS) of Ethiopia</strong>, the <strong>Somali Youth Growth Mind Organization (SYGO)</strong> is dedicated to creating sustainable change. Our mission is to empower youth—especially young women and girls—through skills development, leadership protection, and economic opportunities in the local communities.
             </p>
 
             <div className="space-y-[24px] pt-[16px]">
@@ -32,9 +32,9 @@ const WhoWeAre = () => {
                   <History size={24} />
                 </div>
                 <div>
-                  <h3 className="text-[20px] font-bold text-sygo-purple dark:text-white mb-[8px]">Youth Empowerment</h3>
+                  <h3 className="text-[20px] font-bold text-sygo-purple dark:text-white mb-[8px]">Youth Empowerment in SRS</h3>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    We focus on unlocking the potential of young people by providing them with the necessary tools, education, and economic opportunities to lead and succeed in their communities.
+                    We focus on unlocking the potential of young people across the Somali Region by providing them with the necessary tools, education, and economic opportunities to lead and succeed.
                   </p>
                 </div>
               </div>

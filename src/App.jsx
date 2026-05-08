@@ -21,9 +21,12 @@ import Training from './pages/Training';
 import Gallery from './pages/Gallery';
 import Reports from './pages/Reports';
 
+import Stats from './components/Stats';
+
 const Home = () => (
   <main>
     <Hero />
+    <Stats />
     <WhoWeAre />
     <VisionMission />
     <CollaborativeApproach />

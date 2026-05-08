@@ -27,7 +27,7 @@ const Gallery = () => {
             Impact <span className="text-transparent bg-clip-text bg-gradient-to-r from-sygo-pink to-sygo-purple">Gallery</span>
           </h1>
           <p className="text-[18px] md:text-[20px] text-slate-600 dark:text-slate-300 max-w-[800px] mx-auto leading-relaxed">
-            A visual journey of our field activities, community outreach, and the faces of change.
+            A visual journey of our field activities, community outreach, and the faces of change across the Somali Regional State of Ethiopia.
           </p>
         </div>
       </section>

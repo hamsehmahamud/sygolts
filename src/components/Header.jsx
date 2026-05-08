@@ -52,23 +52,20 @@ const Header = ({ theme, toggleTheme }) => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-[8px]">
+        <nav className="hidden lg:flex items-center gap-[6px] bg-white/50 dark:bg-slate-800/50 backdrop-blur-md px-2 py-1.5 rounded-full border border-slate-200/50 dark:border-slate-700/50 shadow-sm">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
             return (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`relative px-[20px] py-[10px] text-[18px] font-bold rounded-full transition-all duration-300 ${
+                className={`relative px-[18px] py-[8px] text-[15px] font-semibold rounded-full transition-all duration-300 ${
                   isActive 
-                    ? 'text-sygo-purple dark:text-white bg-sygo-blue/10 dark:bg-sygo-blue/20' 
-                    : 'text-slate-600 dark:text-slate-300 hover:text-sygo-purple dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
+                    ? 'text-white bg-sygo-purple shadow-md shadow-sygo-purple/20' 
+                    : 'text-slate-600 dark:text-slate-300 hover:text-sygo-pink dark:hover:text-sygo-pink hover:bg-white dark:hover:bg-slate-800'
                 }`}
               >
                 {link.name}
-                {isActive && (
-                  <span className="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-[6px] h-[6px] rounded-full bg-sygo-pink"></span>
-                )}
               </Link>
             );
           })}
@@ -78,18 +75,15 @@ const Header = ({ theme, toggleTheme }) => {
         <div className="hidden lg:flex items-center gap-[24px]">
           <button 
             onClick={toggleTheme}
-            className="group relative w-[48px] h-[48px] bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-sygo-purple dark:text-sygo-yellow shadow-inner hover:shadow-md transition-all duration-500 overflow-hidden"
+            className="group relative w-[44px] h-[44px] bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-sygo-purple dark:text-sygo-yellow shadow-sm border border-slate-200/50 dark:border-slate-700/50 hover:shadow-md transition-all duration-300 overflow-hidden"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
           >
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent to-sygo-blue/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             {theme === 'light' ? (
-              <Moon size={24} className="transition-transform duration-500 group-hover:-rotate-[20deg]" />
+              <Moon size={20} className="transition-transform duration-500 group-hover:-rotate-[20deg]" />
             ) : (
-              <Sun size={24} className="transition-transform duration-500 group-hover:rotate-90" />
+              <Sun size={20} className="transition-transform duration-500 group-hover:rotate-90" />
             )}
-          </button>
-          <button className="bg-sygo-pink hover:bg-[#d61b6d] text-white font-bold text-[18px] px-[32px] py-[14px] rounded-[30px] shadow-lg shadow-sygo-pink/30 hover:shadow-sygo-pink/50 hover:-translate-y-1 transition-all duration-300">
-            Donate Now
           </button>
         </div>
 
@@ -112,18 +106,18 @@ const Header = ({ theme, toggleTheme }) => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-[80px] sm:top-[100px] left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl py-[32px] px-[24px] border-t dark:border-slate-800 flex flex-col gap-[24px] animate-slide-in-up">
-          <nav className="flex flex-col gap-[12px]">
+        <div className="lg:hidden absolute top-[80px] sm:top-[100px] left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl py-[24px] px-[20px] border-t border-slate-100 dark:border-slate-800 flex flex-col animate-slide-in-up">
+          <nav className="flex flex-col gap-[8px]">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path || (link.path !== '/' && location.pathname.startsWith(link.path));
               return (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-[20px] font-bold px-[20px] py-[14px] rounded-2xl transition-all ${
+                  className={`text-[17px] font-semibold px-[24px] py-[14px] rounded-[16px] transition-all flex items-center justify-between ${
                     isActive 
-                      ? 'text-white bg-sygo-purple shadow-md' 
-                      : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
+                      ? 'text-white bg-sygo-purple shadow-md shadow-sygo-purple/20' 
+                      : 'text-slate-600 dark:text-slate-300 hover:text-sygo-pink hover:bg-slate-50 dark:hover:bg-slate-800'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -132,9 +126,6 @@ const Header = ({ theme, toggleTheme }) => {
               );
             })}
           </nav>
-          <button className="bg-sygo-pink hover:bg-[#d61b6d] text-white font-bold text-[20px] px-[32px] py-[16px] rounded-[24px] w-full shadow-lg shadow-sygo-pink/30 hover:shadow-sygo-pink/50 transition-all">
-            Donate Now
-          </button>
         </div>
       )}
     </header>

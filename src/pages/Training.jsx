@@ -14,7 +14,7 @@ const Training = () => {
             Skill <span className="text-transparent bg-clip-text bg-gradient-to-r from-sygo-yellow to-sygo-pink">Training</span>
           </h1>
           <p className="text-[18px] md:text-[20px] text-slate-600 dark:text-slate-300 max-w-[800px] mx-auto leading-relaxed">
-            Empowering youth and women through comprehensive capacity building and skills development.
+            Empowering youth and women through comprehensive capacity building and skills development across Jigjiga and the Somali Regional State.
           </p>
         </div>
       </section>
